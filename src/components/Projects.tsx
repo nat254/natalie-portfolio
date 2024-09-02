@@ -143,7 +143,7 @@ export default function Gallery() {
         {filteredItems.map((item) => (
          
           <div className="max-w-sm bg-white border border-gray-300 shadow rounded-lg" key={item.id}>
-            <div key={item.id} className="filter-item relative group">
+            <div className="filter-item relative group">
               <Image
                 className="h-auto max-w-full object-cover rounded-t-lg"
                 src={item.src}
