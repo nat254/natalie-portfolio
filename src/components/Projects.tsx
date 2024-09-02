@@ -83,7 +83,7 @@ export default function Gallery() {
       id: 9,
       category: "development",
       src: "/portf_image.PNG",
-      link: "https://example.com/Development3",
+      link: "https://nat254.github.io/natalie_portfolio/",
       title: "Portfolio Website - Trial",
       description: "This is a trial portfolio website that I created to test my skills in web development.",
       languages: ["HTML","CSS","JavaScript"],
