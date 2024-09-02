@@ -10,7 +10,7 @@ export default function Gallery() {
     {
       id: 1,
       category: "development",
-      src: "./avechi.PNG",
+      src: "/avechi.PNG",
       link: "https://github.com/nat254/ecommerce",
       title: "Avechi - Electronics Ecommerce Website",
       description: "This is a revamp of the original Avechi website allowing users to view latest electronics, order them, and view history of orders and payments.",
@@ -19,7 +19,7 @@ export default function Gallery() {
     {
       id: 2,
       category: "design",
-      src: "./cupcake_portf.PNG",
+      src: "/cupcake_portf.PNG",
       link: "https://www.figma.com/design/crCsqwnIguaFY9j1y49p6W/Untitled?node-id=0-1&t=Br1XZc01B2qCbQ4z-1",
       title: "Cupcake - Ecommerce Hero Section",
       description: "This is the design of a hero section for a cupcake ecommerce website.",
@@ -28,7 +28,7 @@ export default function Gallery() {
     {
       id: 3,
       category: "development",
-      src: "./chakura.PNG",
+      src: "/chakura.PNG",
       link: "https://github.com/nat254/ecommerce-food",
       title: "Chakura - Food Ecommerce Website",
       description: "This is an ecommerce project that enables users to order food online, and check history of payments and orders.",
@@ -37,7 +37,7 @@ export default function Gallery() {
     {
       id: 4,
       category: "design",
-      src: "./new_portf.PNG",
+      src: "/new_portf.PNG",
       link: "https://www.figma.com/design/gbkzSWEMsfPo3Qq3oc7BgC/Untitled?node-id=1-8&t=lft0aspMtVjVT6BP-1",
       title: "Portfolio Website Design",
       description: "This is the design of this portfolio website.",
@@ -46,7 +46,7 @@ export default function Gallery() {
     {
       id: 5,
       category: "development",
-      src: "./pcos.PNG",
+      src: "/pcos.PNG",
       link: "https://github.com/nat254/pcosDetect",
       title: "PCOS Detection System",
       description: "This is a project that uses machine learning to help health practitioners detect the possibility of PCOS in patients.",
@@ -55,7 +55,7 @@ export default function Gallery() {
     {
       id: 6,
       category: "design",
-      src: "./triumf.PNG",
+      src: "/triumf.PNG",
       link: "confidential",
       title: "TriumfLand Saga - Flight minigame",
       description: "This is the design of a flight educational minigame that teaches children how to navigate their emotions.",
@@ -64,7 +64,7 @@ export default function Gallery() {
     {
       id: 7,
       category: "development",
-      src: "./eesti.PNG",
+      src: "/eesti.PNG",
       link: "eesti-explorer.vercel.app",
       title: "Eesti Explorer - Travel Website",
       description: "This is a website that allows users to view tourist destinations in Estonia, book tours from various tourguides, and make payments via stripe.",
@@ -73,7 +73,7 @@ export default function Gallery() {
     {
       id: 8,
       category: "design",
-      src: "./gichohi.PNG",
+      src: "/gichohi.PNG",
       link: "https://www.figma.com/design/eJE7at6PrEGwvndYzSJGKx/H.W-Gichohi?node-id=1-2&t=4BlMcHNslkANp9eG-1",
       title: "H.W Gichohi - Audit Company Informational Website",
       description: "This is the design of an informational website for an audit company describing the services they offer and how to contact them.",
@@ -82,7 +82,7 @@ export default function Gallery() {
     {
       id: 9,
       category: "development",
-      src: "./portf_image.PNG",
+      src: "/portf_image.PNG",
       link: "https://example.com/Development3",
       title: "Portfolio Website - Trial",
       description: "This is a trial portfolio website that I created to test my skills in web development.",
@@ -142,12 +142,18 @@ export default function Gallery() {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {filteredItems.map((item) => (
          
-          <div className="max-w-sm bg-white border border-gray-300 shadow rounded-lg">
+          <div className="max-w-sm bg-white border border-gray-300 shadow rounded-lg" key={item.id}>
             <div key={item.id} className="filter-item relative group">
-              <img
+              <Image
                 className="h-auto max-w-full object-cover rounded-t-lg"
                 src={item.src}
                 alt=""
+                width={500}
+                height={500}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
               />
               <a
                 href={item.link}
