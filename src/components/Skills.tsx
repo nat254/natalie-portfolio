@@ -25,62 +25,62 @@ export default function Skills() {
     {
       id: 1,
       name: "HTML",
-      icon: <FaHtml5 className="text-7xl" />,
+      icon: <FaHtml5 className="md:text-7xl text-3xl" />,
     },
     {
       id: 2,
       name: "CSS",
-      icon: <IoLogoCss3 className="text-7xl" />,
+      icon: <IoLogoCss3 className="md:text-7xl text-3xl" />,
     },
     {
       id: 3,
       name: "JavaScript",
-      icon: <FaJs className="text-7xl" />,
+      icon: <FaJs className="md:text-7xl text-3xl" />,
     },
     {
       id: 4,
       name: "React",
-      icon: <FaReact className="text-7xl" />,
+      icon: <FaReact className="md:text-7xl text-3xl" />,
     },
     {
       id: 5,
       name: "Next.js",
-      icon: <RiNextjsFill className="text-7xl" />,
+      icon: <RiNextjsFill className="md:text-7xl text-3xl" />,
     },
     {
       id: 6,
       name: "Tailwind CSS",
-      icon: <RiTailwindCssFill className="text-7xl" />,
+      icon: <RiTailwindCssFill className="md:text-7xl text-3xl" />,
     },
     {
       id: 7,
       name: "TypeScript",
-      icon: <BiLogoTypescript className="text-7xl" />,
+      icon: <BiLogoTypescript className="md:text-7xl text-3xl" />,
     },
     {
       id: 8,
       name: "Supabase",
-      icon: <RiSupabaseFill className="text-7xl" />,
+      icon: <RiSupabaseFill className="md:text-7xl text-3xl" />,
     },
     {
       id: 9,
       name: "Firebase",
-      icon: <IoLogoFirebase className="text-7xl" />,
+      icon: <IoLogoFirebase className="md:text-7xl text-3xl" />,
     },
     {
       id: 10,
       name: "MySQL",
-      icon: <DiMysql className="text-7xl" />,
+      icon: <DiMysql className="md:text-7xl text-3xl" />,
     },
     {
       id: 11,
       name: "Python",
-      icon: <FaPython className="text-7xl" />,
+      icon: <FaPython className="md:text-7xl text-3xl" />,
     },
     {
       id: 12,
       name: "Bootstrap",
-      icon: <FaBootstrap className="text-7xl" />,
+      icon: <FaBootstrap className="md:text-7xl text-3xl" />,
     },
   ];
 
@@ -103,21 +103,21 @@ export default function Skills() {
           <CarouselContent>
             {skills.map((skill) => (
               <CarouselItem key={skill.id} className="md:basis-1/5 basis-1/2">
-                <div className="p-5">
-                  <Card>
-                    <CardContent className="flex flex-col items-center justify-center p-6 bg-[#EDE5D8] rounded-lg hover:border-4 border-[#F2A615]">
+                <div className="flex flex-col items-center p-4">
+                  <Card className="w-[4rem] h-[4rem] md:w-[10rem] md:h-[6.5rem] md:mb-2">
+                    <CardContent className="flex flex-col items-center p-4 bg-[#EDE5D8] rounded-lg hover:border-4 border-[#F2A615]">
                       {skill.icon}
                     </CardContent>
                   </Card>
-                  <div className="mt-2 text-center text-xl font-semibold text-[#EDE5D8] hover:text-yellow-500">
+                  <div className="mt-2 text-center text-sm md:text-xl font-semibold text-[#EDE5D8] hover:text-yellow-500">
                     {skill.name}
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute md:left-[-3rem] left-[-2rem] top-[35%] -translate-y-1/2 lg:top-[45%]" />
+          <CarouselNext className="absolute md:right-[-3rem] right-[-3rem] top-[35%] -translate-y-1/2 lg:top-[45%]" />
         </Carousel>
       </div>
     </div>

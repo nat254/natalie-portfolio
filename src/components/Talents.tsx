@@ -45,7 +45,7 @@ export default function Talents() {
         </div>
         <div className="grid gap-12 grid-cols-1 lg:grid-cols-2 mt-10 pb-20 place-items-center">
         {talents.map((talent, index) => (
-          <div className="w-full max-w-sm bg-none border-2 border-[#EDE5D8] rounded-sm" key={index}>
+          <div className="lg:w-[25rem] w-[15rem] bg-none border-2 border-[#EDE5D8] rounded-sm" key={index}>
             
               <div className="flex flex-col items-center">
                 <div className="border-2 border-[#F65B36]  mt-6 px-4 py-2">

@@ -165,7 +165,7 @@ export default function Gallery() {
               </a>
             </div>
             <div className="p-5">
-              <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">{item.title}</h5>
+              <h5 className="mb-2 md:text-xl font-bold tracking-tight text-gray-900">{item.title}</h5>
               <p className="text-sm font-normal text-gray-700">{item.description}</p>
             </div>
             <div className="flex flex-wrap gap-2 justify-start px-5 pb-5">
